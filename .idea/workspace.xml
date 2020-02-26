@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="547f588e-ceb9-4d54-9ed6-e808c3a2e163" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/about_me.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -33,9 +32,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/hw1/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MIU\WAP\WAP\hw1\images" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -60,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582574070475</updated>
       <workItem from="1582574074614" duration="8418000" />
-      <workItem from="1582659992740" duration="5581000" />
+      <workItem from="1582659992740" duration="12357000" />
     </task>
     <servers />
   </component>
