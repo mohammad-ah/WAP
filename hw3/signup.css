@@ -1,0 +1,44 @@
+.main-container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+fieldset strong,
+fieldset label.left{
+    float: left;
+    width: 150px;
+}
+
+fieldset {
+    background-color: rgba(179, 159, 246, 0.38);
+    border-radius: 10px;
+    box-shadow: 1px 1px gray;
+}
+
+legend {
+    background-color: white;
+    box-shadow: 1px 1px gray;
+    border: 1px outset gray;
+}
+
+a {
+    color: #ff4911;
+}
+
+button {
+    background-color: rgba(255, 50, 27, 0.36);
+    font-weight: bold;
+    font-size: 12pt;
+}
+
+* {
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
+input, select{
+    margin-bottom: 10px;
+}
+
+.head {
+    margin-bottom: 20px;
+}

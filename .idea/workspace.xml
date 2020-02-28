@@ -32,12 +32,13 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hw1/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lab2" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MIU\WAP\WAP\Lab2" />
       <recent name="D:\MIU\WAP\WAP\hw1\images" />
     </key>
   </component>
@@ -64,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582574070475</updated>
       <workItem from="1582574074614" duration="8418000" />
-      <workItem from="1582659992740" duration="18215000" />
+      <workItem from="1582659992740" duration="25993000" />
     </task>
     <servers />
   </component>

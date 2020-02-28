@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="head">
+            <img src="logo.png">
+        </div>
+        <div class="form-div">
+            <fieldset>
+                <legend>New User Signup:</legend>
+                <form class="form" action="">
+                        <strong>Name:</strong><input type="text" name="name" size="16">
+
+                    <div>
+                        <strong>Gender:</strong>
+                        <label><input type="radio" name="gender" value="male">Male</label>
+                        <label><input type="radio" name="gender" value="female" checked>Female</label>
+                    </div>
+
+                    <div>
+                        <strong>Age:</strong><input type="text" name="age" size="6" pattern="[0-9]{1,2}" title=" only two digits allowed ">
+                    </div>
+
+                    <div>
+                        <strong>Personality Type:</strong><input type="text" name="p-type" size="6" maxlength="4" title=" only 4 chars allowed ">
+                        <label>(<a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp">Dont know your type?</a>)</label>
+                    </div>
+
+                    <div>
+                        <strong>Favorite OS:</strong><select class="custom-select" name="favorite-os">
+                            <option selected>
+                                Windows
+                            </option>
+
+                            <option>
+                                Liux
+                            </option>
+
+                            <option>
+                                Mac OS X
+                            </option>
+
+                        </select>
+                    </div>
+
+                    <div>
+                        <strong>Seeking age:</strong><input type="text" maxlength="2" title=" only 2 chars allowed " name="min-s-age" size="6" placeholder="Min"><label> to</label>
+                        <input type="text" maxlength="2" size="6" title=" only 2 chars allowed " name="max-s-age" placeholder="Max">
+                    </div>
+
+                    <div>
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </fieldset>
+
+        </div>
+        <div>
+            <p>
+                This page is for single nerds to meet and date each other!  Type in your personal information and wait for the nerdly luv to begin!  Thank you for using our site.
+            </p>
+
+            <p>
+                Results and page (C) Copyright NerdLuv Inc.
+            </p>
+        </div>
+
+        <div id="w3c">
+            <a href="https://webster.cs.washington.edu/validate-html.php">
+                <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="Valid HTML" />
+            </a>
+            <a href="https://webster.cs.washington.edu/validate-css.php">
+                <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt="Valid CSS" />
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>
