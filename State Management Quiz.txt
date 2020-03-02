@@ -1,0 +1,113 @@
+1. Can post requests be bookmarked? What are the problems?
+An HTTP POST can be bookmarked, but since a bookmark only consists of the URL, all of the form parameters will be lost.
+This will often mean that the web server doesn't know what to do with the request, since it was expecting some form parameters.
+
+
+2. What is the purpose of request dispatching?
+The RequestDispatcher interface provides the facility of dispatching the request to another resource
+it may be html, servlet or jsp. This interface can also be used to include the content of another resource also.
+It is one of the way of servlet collaboration.
+
+
+
+3. What is the difference between redirect and request dispatch?
+Redirection is a type of response sent back to the client,
+whereas the forward delegation takes place completely on the server side and the result of the forward action returns to the client as if it came only from the original URL.
+
+Another difference is that forward delegation can be used only for in-applications resources,
+whereas redirection command can redirect the client browser outside the current domain.
+
+
+4. What is an attribute ?
+An attribute in servlet is an object that can be set, get or removed from one of the following scopes:
+
+1- request scope
+2- session scope
+3- application scope
+The servlet programmer can pass informations from one servlet to another using attributes.
+It is just like passing object from one class to another so that we can reuse the same object again and again.
+
+Attribute specific methods of ServletRequest, HttpSession and ServletContext interface
+
+
+
+5. What is the difference between attributes and parameters?
+Parameters are read only, attributes are read/write objects. 
+
+Parameters are String objects, attributes can be objects of any type.
+
+Parameters may come into our application from the client request, or may be configured through deployment descriptor (web.xml) elements or their corresponding annotations.
+Attributes are objects that are attached to various scopes and can be modified, retrieved or removed. Attributes can be read, created, updated and deleted by the web container as well as our application code
+
+
+
+6. What are dangers of using attributes?
+because of the multi-threading issues, so they have concurrency issues
+If any of the attribute manipulation functions are invoked in session scope when the session is invalid, IllegalStateException will be thrown.
+Null is returned if no attribute of the given name exists.
+If we call getAttributeNames() when no attributes are there, an empty enumeration will be returned. However, since some attributes will always be supplied by the web container during the application context, the enumeration returned by getAttributeNames() will never be empty in the application scope.
+There is no guarantee of the order of the attributes within the enumeration returned by the getAttributeNames() method.
+Not thread safe and is like nuclear power.
+
+
+7. What does it mean to say that http is stateless? Give an example of a stateful protocol.
+Even though multiple requests can be sent over the same HTTP connection, the server does not attach any special meaning to their arriving over the same socket. That is solely a performance thing, intended to minimize the time/bandwidth that'd otherwise be spent reestablishing a connection for each request.
+
+As far as HTTP is concerned, they are all still separate requests and must contain enough information on their own to fulfill the request. That is the essence of "statelessness". Requests will not be associated with each other absent some shared info the server knows about, which in most cases is a session ID in a cookie.
+
+A good example of such a protocol is the File Transfer Protocol
+
+
+8. Give 5 different methods for maintaining state information (count each attribute scope as one method).
+
+Query String
+
+Cookies
+
+Form Methods (Get and Post)
+
+Session (InProc Web server)
+
+Session (Dedicated web server)
+
+Local Persistence (Google Gears) (thanks Steve Moyer) etc.
+
+request scope: destroyed when servlet finishes processing request request.setAttribute("requestState", "bob");
+session scope: destroyed when user closes browser request.getSession().setAttribute("sessionState", "bob");
+application scope destroyed when the container stopped. this.getServletContext().setAttribute("applicationState", "bob");
+Cookies saved on browser, either temporary (deleted when the browser closes) or permanent Cookie c = new Cookie("cookiePermanentState", "bob"); c.setMaxAge(3600); response.addCookie(c);
+Hidden fields on a form input type='hidden' name='hiddenState' value='bob'
+
+
+9. How long does a session last?
+By default, a session lasts until there's 30 minutes of inactivity, but you can adjust this limit so a session lasts from a few seconds to several hours
+
+
+
+10. What is a cookie, and how long does a cookie last?
+An HTTP cookie is a small piece of data sent from a website and stored on the user's computer by the user's web browser while the user is browsing.
+
+The time of expiry of a cookie can be set when the cookie is created. By default the cookie is destroyed when the current browser window is closed, but it can be made to persist for an arbitrary length of time after that.
+
+
+11. What is the purpose of URL rewriting?
+
+Url rewriting is a process of appending or modifying any url structure while loading a page.
+The request made by client is always a new request and the server can not identify whether the current request is send by a new client or the previous same client.
+Due to This property of HTTP protocol and Web Servers are called stateless. But many times we should know who is client in the processing request.
+
+If your browser does not support cookies, URL rewriting provides you with another session tracking alternative.
+URL rewriting is a method in which the requested URL is modified to include a session ID. There are several ways to perform URL rewriting.
+
+
+
+12. Why does the request attribute report ‘null’ for the maintaining state demo?
+If no object is found for the specified attribute, then the getAttribute() method returns null.
+and because local attribute requestState is not transferred to the post in  the demo.
+
+
+
+
+
+
+

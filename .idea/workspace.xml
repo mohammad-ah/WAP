@@ -32,7 +32,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lab2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -65,7 +65,8 @@
       <option name="presentableId" value="Default" />
       <updated>1582574070475</updated>
       <workItem from="1582574074614" duration="8418000" />
-      <workItem from="1582659992740" duration="25993000" />
+      <workItem from="1582659992740" duration="26685000" />
+      <workItem from="1583123675467" duration="87000" />
     </task>
     <servers />
   </component>
@@ -77,13 +78,17 @@
       <screen x="0" y="0" width="1707" height="919" />
     </state>
     <state x="628" y="262" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1707.919@0.0.1707.919" timestamp="1582574603529" />
-    <state x="633" y="213" key="FileChooserDialogImpl" timestamp="1582758770566">
+    <state x="633" y="213" key="FileChooserDialogImpl" timestamp="1582919915983">
       <screen x="0" y="0" width="1707" height="919" />
     </state>
-    <state x="633" y="213" key="FileChooserDialogImpl/0.0.1707.919@0.0.1707.919" timestamp="1582758770566" />
+    <state x="633" y="213" key="FileChooserDialogImpl/0.0.1707.919@0.0.1707.919" timestamp="1582919915983" />
     <state x="362" y="101" key="SettingsEditor" timestamp="1582574256314">
       <screen x="0" y="0" width="1707" height="919" />
     </state>
     <state x="362" y="101" key="SettingsEditor/0.0.1707.919@0.0.1707.919" timestamp="1582574256314" />
+    <state x="292" y="183" key="new project wizard" timestamp="1582919939635">
+      <screen x="0" y="0" width="1707" height="919" />
+    </state>
+    <state x="292" y="183" key="new project wizard/0.0.1707.919@0.0.1707.919" timestamp="1582919939635" />
   </component>
 </project>
