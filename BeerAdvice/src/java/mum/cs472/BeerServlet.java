@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Dalia
+ * @author 
  */
 public class BeerServlet extends HttpServlet {
 
