@@ -7,6 +7,7 @@ package mum.cs472;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.concurrent.TimeUnit;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -44,7 +45,29 @@ public class Question1 extends HttpServlet {
         String answer = request.getParameter("answer");
         int answer1=0;
         
-             
+        String age_s = request.getParameter("age");
+        int age = 0;
+        try
+        {
+            age = Integer.parseInt(age_s.trim());
+            
+        } catch (Exception e) {
+            CorrectAnswers.getInstance().setError("You should enter a correct age");
+            System.out.println("error appears");
+            RequestDispatcher dispatcher =
+    request.getRequestDispatcher("index.jsp");
+     dispatcher.forward(request, response);
+            
+        }
+        
+        if(age <4 || age > 100)
+        {
+            CorrectAnswers.getInstance().setError("age must be between 4 and 100");
+            System.out.println("error appears");
+            RequestDispatcher dispatcher =
+    request.getRequestDispatcher("index.jsp");
+     dispatcher.forward(request, response);
+        }
      
         try
         {
@@ -53,16 +76,52 @@ public class Question1 extends HttpServlet {
         } catch (Exception e) {
         }
         
+        CorrectAnswers.getInstance().setAge(age);
+        
         if (answer1 == 9)
         {
             int c = CorrectAnswers.getInstance().correct;
-            c++;
+            
+            if(CorrectAnswers.getInstance().tries == 0)
+            {
+            c+=10;
+            }
+            else if(CorrectAnswers.getInstance().tries == 1)
+            {
+                c+=5;
+            }
+            else {
+                c+=2;
+            }
             CorrectAnswers.getInstance().setCorrect(c);
+            request.setAttribute("correctAnswer", "");
+
         }
+        else {
+            
+            PrintWriter out = response.getWriter();
+   System.out.println("test" + CorrectAnswers.getInstance().tries);
+   
+            CorrectAnswers.getInstance().setTries(++CorrectAnswers.getInstance().tries);
+            if(CorrectAnswers.getInstance().tries != 3) {
+                    RequestDispatcher dispatcher =
+                request.getRequestDispatcher("index.jsp");
+                 dispatcher.forward(request, response);
+            }
+            else {
+               
+                    request.setAttribute("correctAnswer", "the answer to the previous questions is 9");
+                
+            }
+        }
+        
+        
+        
+        CorrectAnswers.getInstance().setError("");
         RequestDispatcher dispatcher =
 request.getRequestDispatcher("Question2.jsp");
  dispatcher.forward(request, response);
-
+CorrectAnswers.getInstance().setTries(0);
         
     }
 
@@ -78,6 +137,12 @@ request.getRequestDispatcher("Question2.jsp");
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 //        processRequest(request, response);
+        
+        request.setAttribute("status", "Think of PI");
+
+        RequestDispatcher dispatcher =
+request.getRequestDispatcher("index.jsp");
+ dispatcher.forward(request, response); 
     }
 
     /**

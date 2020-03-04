@@ -15,13 +15,32 @@
     </head>
     <body>
         <h1>The number Quiz</h1>
-        <p>your current score is <%= CorrectAnswers.getInstance().getCorrect() %> </p>
-        <p>Guess the next number in sequence</p>
-        <p>3, 1, 4, 5</p>
-        <form method='post' action='Question1' >
+        <p><%= CorrectAnswers.getInstance().getError() %></p>
+        <form method='post' action='Question1' name="form">
+            Your Age:<input type="text" name="age" size="5"><br><br>
+
+            <p>your current score is <%= CorrectAnswers.getInstance().getCorrect() %> </p>
+            <p>Guess the next number in sequence</p>
+            <p>3, 1, 4, 5</p>
+        
             your answer: <input type="text" name="answer" size="20">
             <br>
-            <input type="submit">
+            <input type="submit"><br>
         </form>
+            
+       
+       <%
+                session.setAttribute("status", ""); 
+            %>
+       <form method="get" action='Question1'>
+            
+            <input type="submit" name="hint" value="Hint">
+        </form>
+        
+        <p>${status}</p>
+        
+        
+        
+       
     </body>
 </html>

@@ -14,9 +14,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <%
+        String res = "";
+        if(CorrectAnswers.getInstance().getCorrect() > 44)
+            res = "A";
+        if(CorrectAnswers.getInstance().getCorrect() > 34)
+            res = "B";
+        if(CorrectAnswers.getInstance().getCorrect() > 24)
+            res = "C";
+        else
+            res = "NC";
+        %>
+        
         <h1>The number Quiz</h1>
+        <p>
+            your age is: <%= CorrectAnswers.getInstance().getAge() %>
+        </p>
         <p>your current score is <%= CorrectAnswers.getInstance().getCorrect() %></p>
-        <p>You have completed the Number Quiz, with a score of <%= CorrectAnswers.getInstance().getCorrect() %> out of 5</p>
+        <p>You have completed the Number Quiz, with a score of <%= CorrectAnswers.getInstance().getCorrect() %></p>
+        <p>You are <%= res %></p>
     </body>
 </html>
 

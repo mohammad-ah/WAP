@@ -44,8 +44,7 @@ public class Question5 extends HttpServlet {
             throws ServletException, IOException {
 String answer = request.getParameter("answer");
         int answer1=0;
-                RequestDispatcher dispatcher = request.getRequestDispatcher("Result.jsp");
-     dispatcher.forward(request, response);
+                
         try
         {
             answer1 = Integer.parseInt(answer.trim());
@@ -56,11 +55,22 @@ String answer = request.getParameter("answer");
         if (answer1 == 32)
         {
             int c = CorrectAnswers.getInstance().correct;
-            c++;
+            if(CorrectAnswers.getInstance().tries == 0)
+            {
+            c+=10;
+            }
+            else if(CorrectAnswers.getInstance().tries == 1)
+            {
+                c+=5;
+            }
+            else {
+                c+=2;
+            }
             CorrectAnswers.getInstance().setCorrect(c);
         }
         
-        
+        RequestDispatcher dispatcher = request.getRequestDispatcher("Result.jsp");
+     dispatcher.forward(request, response);
         
     }
 
@@ -75,6 +85,15 @@ String answer = request.getParameter("answer");
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        request.setAttribute("status", "Think of number 2");
+
+        RequestDispatcher dispatcher =
+request.getRequestDispatcher("Question5.jsp");
+ dispatcher.forward(request, response); 
+ 
+ CorrectAnswers.getInstance().setTries(0);
+
     }
 
     /**

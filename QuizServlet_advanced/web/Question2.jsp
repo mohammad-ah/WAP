@@ -14,7 +14,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        
         <h1>The number Quiz</h1>
+        
+        <p style="color: red;">${correctAnswer}</p>
+        
         <p>your current score is <%= CorrectAnswers.getInstance().getCorrect() %> </p>
         <p>Guess the next number in sequence</p>
         <p>1, 1, 2, 3, 5</p>
@@ -23,5 +27,18 @@
             <br>
             <input type="submit">
         </form>
+    
+        <%
+                session.setAttribute("status", ""); 
+            %>
+       <form method="get" action='Question2'>
+            
+            <input type="submit" name="hint" value="Hint">
+        </form>
+        
+        <p>${status}</p>
+       
+       
+       
     </body>
 </html>

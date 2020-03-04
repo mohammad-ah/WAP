@@ -23,5 +23,15 @@
             <br>
             <input type="submit">
         </form>
+        
+        <%
+                session.setAttribute("status", ""); 
+            %>
+       <form method="get" action='Question4'>
+            
+            <input type="submit" name="hint" value="Hint">
+        </form>
+        
+        <p>${status}</p>
     </body>
 </html>
