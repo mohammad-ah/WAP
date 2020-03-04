@@ -12,7 +12,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
 
 /**
  *
- * @author Dalia
+ * @author
  */
 public class Head extends SimpleTagSupport {
 
