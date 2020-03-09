@@ -3,13 +3,11 @@ window.onload = function() {
     document.getElementById("biggerBtn").onclick = fontTimer
     document.getElementById("blingBox").onchange = chechBoxHandler
     document.getElementById("malkovitchBtn").onclick = malkcheckHandler
-    // document.getElementById("igpayBtn").onclick = piggify
 
 };
 
 
 var iterations = 3;
-alert("Hello, world!");
 
 
 function fontTimer() {
@@ -24,7 +22,6 @@ function btnHandler() {
         var style = window.getComputedStyle(txtArea, null).getPropertyValue('font-size');
         var fontSize = parseInt(style) + 2;
         document.getElementById("txtArea").style.fontSize = fontSize + "pt";
-        iterations--;
         iterations--;
 
     }
@@ -61,17 +58,3 @@ function malkcheckHandler() {
     }
     document.getElementById("txtArea").value = txtValue;
 }
-
-// function piggify() {
-//     var txtArea = document.getElementById("txtArea");
-//     var str = txtArea.value.toLowerCase();
-//     var st = "";
-//     for (var j = 0; j < str.length; j++) {
-//         if ("aeiouAEIOU".indexOf(str.charAt(j)) !== -1) {
-//             st = st + str.substr(j, str.length);
-//             st = st + str.substr(0, j) + "ay";
-//             break;
-//         }
-//     }
-//     document.getElementById('txtArea').value = st;
-// }
