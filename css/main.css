@@ -39,7 +39,7 @@
     width: 20%;
     float: left;
     background-color: rgba(111, 196, 166, 0.05);
-    height: 500px;
+    overflow: hidden;
 }
 
 .left-side-bar a {
