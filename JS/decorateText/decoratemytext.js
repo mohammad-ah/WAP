@@ -11,7 +11,7 @@ var iterations = 3;
 
 
 function fontTimer() {
-    setInterval(btnHandler, 10);
+    setInterval(btnHandler, 300);
 
 }
 
