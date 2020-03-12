@@ -17,6 +17,7 @@ $(document).ready(function(){
 
         // reset
         $(".boundary").removeClass("fail");
+        $(".boundary").removeClass("win");
 
         // start game
         $("#status").text("started.....");
