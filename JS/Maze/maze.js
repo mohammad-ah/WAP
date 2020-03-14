@@ -37,7 +37,14 @@ $(document).ready(function(){
        
 
         $("#end").on("mouseenter",function(){
-           winner();
+            //if($("#status").text() != "You Lose :(")
+            //{
+                winner();
+            //}
+
+            ///////////////////////////
+            // think outside the box //
+            ///////////////////////////
         });
 
     });
