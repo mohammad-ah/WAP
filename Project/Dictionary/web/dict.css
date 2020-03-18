@@ -1,0 +1,147 @@
+body {
+    background-color: #e7e7e7;
+}
+.header {
+    background-color: #6f64e2;
+    height: 70px;
+    top:0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.logo {
+    float: left;
+    width: 70px;
+    height: 70px;
+}
+.logoContainer {
+    height: 75px;
+    width: 250px;
+    float: left;
+}
+#dictionary {
+    top: 25px;
+    position: relative;
+    font-size: 24pt;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.searchBar {
+    float: left;
+    width: 66%;
+}
+#searchbar_input {
+    width: 106%;
+    height: 50px;
+    margin-top: 9px;
+}
+#search-submit {
+    margin-top: 16px;
+    width: 35px;
+    height: 35px;
+    font-size: 18pt;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.titleBox {
+    /*margin-top: 55px;*/
+    width: 70%;
+    /*height: 400px;*/
+    margin: 0 auto;
+    /*background-color: white;*/
+}
+.title {
+    margin-top: 55px;
+    /*background-color: blueviolet;*/
+    /*height: 400px;*/
+    overflow: auto;
+    margin-bottom: 4px;
+}
+.content {
+    /*height: 500px;*/
+    /*background-color: unset;*/
+    margin: 0 auto;
+    width: 70%;
+    padding-top: 1px;
+    min-height: calc(100vh - 197px);
+}
+.definitions {
+    margin: 10px;
+}
+.separator {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.wordType {
+    color: #1a1a1a;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: italic;
+}
+.definition {
+    color: #1a1a1a;
+    font-size: 19px;
+    font-family: monospace;
+}
+.word {
+    font-weight: bold;
+    word-break: break-word;
+    display: inline;
+    /*margin: 0 10px 10px 0;*/
+    line-height: normal;
+    font-size: 49px;
+    font-family: cursive;
+    color: #e2a91d;
+}
+
+.relativBox {
+    background-color: white;
+    height: 25px;
+    text-decoration: none;
+    color: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    float: left;
+    margin-right: 10px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-left: 8px;
+    margin-bottom: 8px;
+}
+
+.relativBox:hover {
+    background-color: #5e46ff;
+    color: white;
+    cursor: pointer;
+}
+
+.footer {
+    height: 50px;
+    background-color: #6f64e2;
+    float: right;
+    margin-top: 15px;
+    width: 100%;
+    /*top, right, bottom, and left*/
+    /*margin: 15px;*/
+}
+
+.footer img {
+    margin: 10px;
+}
+
+.error {
+    font-weight: bold;
+    word-break: break-word;
+    display: inline;
+    /*margin: 0 10px 10px 0;*/
+    line-height: normal;
+    font-size: 40px;
+    font-family: cursive;
+    color: red;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+    <head>
+        <script type="text/javascript" src="dict.js"></script>
+        <link href="dict.css" type="text/css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <div class="logoContainer">
+                <a  href="https://mohammad-ah.github.io/" data-linkid="lxabec">
+                    <img class="logo" src="background.png">
+                </a><a href="https://mohammad-ah.github.io/" id="dictionary">Dictionary</a>
+            </div>
+            <div class="searchBar">
+                <input type="search" autocapitalize="off" autocorrect="off" autocomplete="off" font-size="18px"
+                       title="Search" name="override_query" id="searchbar_input">
+            </div>
+            <button aria-label="Search" type="button" id="search-submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+        <div class="titleBox">
+            <div class="title" id="title">
+                <h2>Search your word and click search button or press enter</h2>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="definitions" id="definitions">
+            </div>
+        </div>
+
+        <div class="footer">
+            <a href="http://validator.w3.org/check/referer">
+                <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png"
+                     alt="HTML validator"/>
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png"
+                     alt="CSS validator"/>
+            </a>
+            <a href="http://webster.cs.washington.edu/jslint?referer">
+                <img src="http://mumstudents.org/jshint/jshint-small.png" alt="JavaScript Lint">
+            </a>
+        </div>
+    </body>
+</html>
